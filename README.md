@@ -67,7 +67,9 @@ If there is a filing or search that doesn't work correctly, please add the infor
 ```bash
   npm run sync
 ```
-That will download all of the test files and make sure that as your are fixing the library you don't break other test cases.  If you run:
+That will download all of the test files and make sure that as your are fixing the library you don't break other test cases.  
+
+If you run:
 ```bash
   npm test
 ```
