@@ -1,0 +1,33 @@
+{
+  "name": "browse-edgar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/utilities/sync.js && mocha -w 'test/**.test.js'",
+    "sync": " node test/utilities/sync.js",
+    "resync": " node test/utilities/sync.js -r"
+  },
+  "author": "Scott Ballantyne",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "md5": "^2.2.1",
+    "mocha": "^5.0.4",
+    "mockery": "^2.1.0",
+    "request-mockery": "^1.0.2"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "cheerio": "^1.0.0-rc.2",
+    "commander": "^2.15.1",
+    "handlebars": "^4.0.11",
+    "joi": "^13.1.2",
+    "klass": "^1.4.1",
+    "omit-empty": "^0.4.1",
+    "request": "^2.85.0",
+    "taffy": "^2.6.2",
+    "underscore": "^1.8.3",
+    "xml2js": "^0.4.19"
+  }
+}
