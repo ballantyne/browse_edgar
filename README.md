@@ -24,6 +24,8 @@ filing.query({cik: '0001090872', accession: '0001326801-17-000011'}, function(er
 
 ### Filing
 
+When downloading a filing, you need to supply the formatted accession number.  I think that there is probably a way to guess the format and then supply the numeric version, but I have not spent the time to do that.
+
 ```javascript
 var BrowseEdgar = require('browse-edgar');
 var filing = new BrowseEdgar.filing({});
