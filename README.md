@@ -16,7 +16,7 @@ As far as I know the SEC doesn't have an api and they don't have limits set that
 ```javascript
 var BrowseEdgar = require('browse-edgar');
 var filing = new BrowseEdgar.filing({user_agent: 'FirstName LastName (Telephone)'});
-filing.query({cik: '0001090872', accession: ''}, function(err, result) {
+filing.query({cik: '0001090872', accession: '0001326801-17-000011'}, function(err, result) {
   console.log(result);
 });
 
@@ -27,7 +27,7 @@ filing.query({cik: '0001090872', accession: ''}, function(err, result) {
 ```javascript
 var BrowseEdgar = require('browse-edgar');
 var filing = new BrowseEdgar.filing({});
-filing.query({cik: '0001090872', accession: ''}, function(err, result) {
+filing.query({cik: '0000315066', accession: '0000215457-18-005184'}, function(err, result) {
   console.log(result);
 });
 ```
