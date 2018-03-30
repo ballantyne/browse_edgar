@@ -19,20 +19,20 @@ var BrowseEdgar = require(path.join(__dirname, '..', '..', 'index'));
 var search = new BrowseEdgar.search({});
 var filing = new BrowseEdgar.filing({});
 
-var urls = _.flatten([
-  _.map(testCases.search, function(options) {
-    var url = search.url(options);
-    var query = omitEmpty(querystring.parse(uri.parse(url).query));
-    file = ['browse-edgar?',querystring.stringify(query)].join('')
-    return {
-      url: url,
-      type: 'search',
-      destination: path.join(__dirname, '..', 'html', 'search'),
-      file: file,
-      params: options
-    }
-  }), 
-  _.map(testCases.filing, function(key) {
+var searchs = _.map(testCases.search, function(options) {
+  var url = search.url(options);
+  var query = omitEmpty(querystring.parse(uri.parse(url).query));
+  file = ['browse-edgar?',querystring.stringify(query)].join('')
+  return {
+    url: url,
+    type: 'search',
+    destination: path.join(__dirname, '..', 'html', 'search'),
+    file: file,
+    params: options
+  }
+})
+
+var urls = _.flatten([searchs, _.map(_.keys(testCases.filing), function(key) {
     var cik = parseInt(key).toString();
     return  _.map(testCases.filing[key], function(c) {
       var numericAccession = c.split('-').join('');
@@ -48,6 +48,8 @@ var urls = _.flatten([
     })
   })
 ])
+
+console.log(urls);
 
 var downloadPages = function() {
   var loop = setInterval(function() {
