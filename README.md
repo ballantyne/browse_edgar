@@ -11,12 +11,12 @@ This is a remake of a [classic](https://github.com/ballantyne/sec_entities).
 ```
 ### Responsible Use
 
-As far as I know the SEC doesn't have an api and they don't have limits set that I know.  So it would be great if people use this module responsibly.  If you could include your name and phone number in the user agent, maybe they can call people that are producing to much traffic on their server.  Also, that way, you traffic will be differentiated from the others that are just installing the module and using it directly.  Ihope that this method of accessing the data isn't restricted.  I think that other services that have this data must have also crawled and indexed the data in a similar way, so hopefully if people don't take advantage we can all have access to this information.
+As far as I know the SEC doesn't have an api and they don't have limits set that I know.  So it would be great if people use this module responsibly.  If you could include your name and phone number in the user agent, maybe they can call people that are producing to much traffic on their server.  Also, that way, you traffic will be differentiated from the others that are just installing the module and using it directly.  I hope that this method of accessing the data isn't restricted.  I think that other services that have this data must have also crawled and indexed the data in a similar way, so hopefully if people don't take advantage we can all have access to this information.
 
 ```javascript
 var BrowseEdgar = require('browse-edgar');
 var filing = new BrowseEdgar.filing({user_agent: 'FirstName LastName (Telephone)'});
-filing.query({cik: '0001090872', accession: '0001326801-17-000011'}, function(err, result) {
+filing.query({cik: '0000052485', accession: '0000352541-18-000033'}, function(err, result) {
   console.log(result);
 });
 
@@ -29,7 +29,7 @@ When downloading a filing, you need to supply the formatted accession number.  I
 ```javascript
 var BrowseEdgar = require('browse-edgar');
 var filing = new BrowseEdgar.filing({});
-filing.query({cik: '0000315066', accession: '0000215457-18-005184'}, function(err, result) {
+filing.query({cik: '0000107832', accession: '0000352541-18-000033'}, function(err, result) {
   console.log(result);
 });
 ```
