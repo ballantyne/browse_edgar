@@ -16,7 +16,7 @@ As far as I know the SEC doesn't have an api and they don't have limits set that
 ```javascript
 var BrowseEdgar = require('browse-edgar');
 var filing = new BrowseEdgar.filing({user_agent: 'FirstName LastName (Telephone)'});
-filing.query({cik: '0000052485', accession: '0000352541-18-000033'}, function(err, result) {
+filing.query({cik: '0001326801', accession: '0001127602-18-011629'}, function(err, result) {
   console.log(result);
 });
 
@@ -29,7 +29,7 @@ When downloading a filing, you need to supply the formatted accession number.  I
 ```javascript
 var BrowseEdgar = require('browse-edgar');
 var filing = new BrowseEdgar.filing({});
-filing.query({cik: '0000107832', accession: '0000352541-18-000033'}, function(err, result) {
+filing.query({cik: '0001326801', accession: '0001127602-18-011629'}, function(err, result) {
   console.log(result);
 });
 ```
