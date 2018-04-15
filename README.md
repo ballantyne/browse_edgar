@@ -1,7 +1,7 @@
 browse-edgar
 ------------
 
-The tests are just to test how well the module parses.  I haven’t ensured that they indicate anything specific about that company.  I was just verifying if my work is correct.  I think someone was commenting that they are wrong?  I think the proper response is job well done.  The example in the readme simply shows that maybe the founder of Facebook thought the price would drop on 3/14.  Not sure that it says more than that.  Finding the signal and what the signal means is something I am leaving up to the users of this library.  Maybe people should not jump to conclusions.  Or maybe now that the module seems like it works I could go and choose better examples that show a correlation between stock prices and when news stories break.  I would enjoy seeing what others make using this module. 
+It is not easy to reply when more than one group of people are talking at you.  Clearly I wasn't replying to all of your comments.
 
 (I am not affiliated with the SEC.  I hope that they don't mind me making this module, maybe they will find it useful themselves)
 
