@@ -1,8 +1,6 @@
 browse-edgar
 ------------
 
-It is not easy to reply when more than one group of people are talking at you.  Clearly I wasn't replying to all of your comments.
-
 (I am not affiliated with the SEC.  I hope that they don't mind me making this module, maybe they will find it useful themselves)
 
 This is a remake of a [classic](https://github.com/ballantyne/sec_entities).
