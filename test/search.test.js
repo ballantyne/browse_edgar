@@ -40,12 +40,14 @@ describe('SEC', function() {
         var search = new BrowseEdgar.search({});
         search.query({
           company: 'alliant' 
-        }, function(err, result) {
-          // console.log('alliant', result);
-          assert.equal(result[0].filings, 'http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001292450&owner=include&count=40&hidefilings=0');
-          assert.equal(result[0].state, 'Virginia');
-          assert.equal(result[0].cik, '0001292450');
-          assert.equal(result[0].company, 'Alliant Ammunition & Powder CO LLC');
+        }, function(err, results) {
+          var result = _.first(_.where(results, {cik: '0001292450'}));
+ 
+          // console.log('alliant', results);
+          assert.equal(result.filings, 'http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001292450&owner=include&count=40&hidefilings=0');
+          assert.equal(result.state, 'Virginia');
+          assert.equal(result.cik, '0001292450');
+          assert.equal(result.company, 'Alliant Ammunition & Powder CO LLC');
           done();
         });
       });
@@ -57,12 +59,13 @@ describe('SEC', function() {
           start: 40,
           count: 40,
           hidefilings: 0
-        }, function(err, result) {
-          // console.log('alliant', result);
-          assert.equal(result[0].filings, 'http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001177872&owner=include&count=40&hidefilings=0');
-          assert.equal(result[0].state, undefined);
-          assert.equal(result[0].cik, '0001177872');
-          assert.equal(result[0].company, 'ALLIANT TAX CREDIT FUND XVIII LTD');
+        }, function(err, results) {
+          var result = _.first(_.where(results, {cik: '0001177872'}));
+          // console.log('alliant', results);
+          assert.equal(result.filings, 'http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001177872&owner=include&count=40&hidefilings=0');
+          assert.equal(result.state, undefined);
+          assert.equal(result.cik, '0001177872');
+          assert.equal(result.company, 'ALLIANT TAX CREDIT FUND XVIII LTD');
           done();
         });
       });
@@ -71,13 +74,15 @@ describe('SEC', function() {
         var search = new BrowseEdgar.search({});
         search.query({
           State: 'IA',
-        }, function(err, result) {
-          // console.log('Iowa', result);
-          assert.equal(result[0].filings, 'http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001267947&owner=include&count=40&hidefilings=0');
-          assert.equal(result[0].state_code, "IA");
-          assert.equal(result[0].state, "Iowa");
-          assert.equal(result[0].cik, '0001267947');
-          assert.equal(result[0].company, '100 COURT INVESTORS LLC TIG-1 LLC');
+        }, function(err, results) {
+          var result = _.first(_.where(results, {cik: '0001267947'}));
+ 
+          // console.log('Iowa', results);
+          assert.equal(result.filings, 'http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001267947&owner=include&count=40&hidefilings=0');
+          assert.equal(result.state_code, "IA");
+          assert.equal(result.state, "Iowa");
+          assert.equal(result.cik, '0001267947');
+          assert.equal(result.company, '100 COURT INVESTORS LLC TIG-1 LLC');
           done();
         });
       });
@@ -87,13 +92,13 @@ describe('SEC', function() {
         var search = new BrowseEdgar.search({});
         search.query({
           Country: 'China',
-        }, function(err, result) {
-          // console.log('China', result);
-          assert.equal(result[0].filings, 'http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001340589&owner=include&count=40&hidefilings=0');
-          assert.equal(result[0].country, 'CHINA');
-          assert.equal(result[0].country_code, 'F4');
-          assert.equal(result[0].cik, '0001340589');
-          assert.equal(result[0].company, '100E LTD');
+        }, function(err, results) {
+          var r = _.where(results, {cik: '0001340589'})[0]
+          assert.equal(r.filings, 'http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001340589&owner=include&count=40&hidefilings=0');
+          assert.equal(r.country, 'CHINA');
+          assert.equal(r.country_code, 'F4');
+          assert.equal(r.cik, '0001340589');
+          assert.equal(r.company, '100E LTD');
           done();
         });
       });
