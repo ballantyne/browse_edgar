@@ -1,12 +1,16 @@
 {
   "name": "browse-edgar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "node test/utilities/sync.js && mocha -w 'test/**.test.js'",
     "sync": " node test/utilities/sync.js",
     "resync": " node test/utilities/sync.js -r"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/ballantyne/browse-edgar.git"
   },
   "author": "Scott Ballantyne",
   "license": "MIT",
