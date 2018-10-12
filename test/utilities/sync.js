@@ -70,7 +70,7 @@ var downloadPages = function() {
     if (urls.length == 0) {
       clearInterval(loop);
     }
-  }, 1000)
+  }, 2000)
 }
 
 downloadPages();
