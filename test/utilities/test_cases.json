@@ -1,6 +1,11 @@
 {
 
   "search": [
+    { "company": "uber"},
+    { "company": "microsoft"},
+    { "company": "google"},
+    { "company": "sap"},
+    { "company": "facebook" },
     { "company": "alliant" },
     { "company": "alliant", "start": 40, "count": 40, "hidefilings": 0 },
     { "State": "IA" },

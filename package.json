@@ -9,8 +9,8 @@
     "resync": " node test/utilities/sync.js -r"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/ballantyne/browse-edgar.git"
+    "type": "git",
+    "url": "https://github.com/ballantyne/browse-edgar.git"
   },
   "author": "Scott Ballantyne",
   "license": "MIT",
