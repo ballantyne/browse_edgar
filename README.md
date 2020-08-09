@@ -42,7 +42,7 @@ search.query({company: 'facebook'}, function(err, result) {
 });
 ```
 
-Donations
+Tips
 ------------
 
 * BTC: 1A1BrPyWpdXLPsidjaMAmyNG71vFwmKPSR
