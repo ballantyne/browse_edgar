@@ -42,13 +42,7 @@ search.query({company: 'facebook'}, function(err, result) {
 });
 ```
 
-Tips
-------------
 
-* BTC: 1A1BrPyWpdXLPsidjaMAmyNG71vFwmKPSR
-* BCH: qqhk5ce25fs706sk9vlnhtezpk3ezp9euc82cyky8v
-* ETH: 0xC33DBB4D997e6A3d9457F41ff07fb13f8DA7bF64
-* LTC: LS2P54xNErZ36pXp95zqTyST7XTx5XHEZy
 
 Contributing
 ------------
